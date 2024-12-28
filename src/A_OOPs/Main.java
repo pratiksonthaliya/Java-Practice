@@ -2,6 +2,8 @@ package A_OOPs;
 
 public class Main {
     public static void main(String[] args) {
+        System.out.println("Object Oriented Programming");
+
         System.out.println("Hello world!");
 
         Student student = new Student(21, "Pratik", "Bangalore");
