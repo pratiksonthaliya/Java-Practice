@@ -41,7 +41,7 @@ class DBConnectionSynchronized {
 
 // 4th: Double-Checked Locking
 class DBConnectionDoubleCheckedLocking {
-    private static DBConnectionDoubleCheckedLocking connectionObj;
+    private static volatile DBConnectionDoubleCheckedLocking connectionObj;
 
     private DBConnectionDoubleCheckedLocking(){}
 
