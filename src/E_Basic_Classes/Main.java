@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args){
         System.out.println("Classes");
 
-        // Main obj = new Main();
+        // O_Collections_2.Main obj = new O_Collections_2.Main();
 
         // Object -> Parent of All Class --> that's why we can keep reference of all/any objects in Object class
         Object obj1 = new Person(1);

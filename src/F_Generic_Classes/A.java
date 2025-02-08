@@ -1,6 +1,6 @@
 package F_Generic_Classes;
 
-//public class A extends Main implements Interface1, Interface2{
+//public class A extends O_Collections_2.Main implements Interface1, Interface2{
 //
 //}
 
