@@ -1,4 +1,4 @@
-package N_Collections;
+package N_Collections_1;
 
 public class Main {
     public static void main(String[] args) {
