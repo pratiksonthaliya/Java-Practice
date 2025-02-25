@@ -5,7 +5,7 @@ import java.util.concurrent.*;
 public class Main {
     public static void main(String[] args) {
         ThreadPoolExecutor poolExecutor = new ThreadPoolExecutor(2, 5, 1,
-                TimeUnit.HOURS, new ArrayBlockingQueue<>(10), new CustomThreadFactor(),
+                TimeUnit.HOURS, new ArrayBlockingQueue<>(10), new CustomThreadFactory(),
                 new CustomRejectedHandler());
 
         poolExecutor.allowCoreThreadTimeOut(true);
@@ -26,7 +26,6 @@ public class Main {
 }
 
 class CustomRejectedHandler implements RejectedExecutionHandler {
-
     @Override
     public void rejectedExecution(Runnable r, ThreadPoolExecutor executor) {
         // logging
@@ -34,8 +33,7 @@ class CustomRejectedHandler implements RejectedExecutionHandler {
     }
 }
 
-class CustomThreadFactor implements ThreadFactory {
-
+class CustomThreadFactory implements ThreadFactory {
     @Override
     public Thread newThread(Runnable r) {
         return new Thread(r);
